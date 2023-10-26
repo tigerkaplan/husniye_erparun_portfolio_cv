@@ -1,0 +1,394 @@
+. {
+  margin: 0 ;
+  padding: 0;
+}
+
+
+/* ============================ Nav&Navbar  =====================================  */
+/* Start Nav&Navbar Section */
+.logo a{
+  text-decoration: none;
+  font-size: 35px;
+  letter-spacing: 5px;
+  font-size: 35px;
+  font-family: sans-serif;
+  text-align:end;
+  justify-content: center;
+
+  font-size: 30px;
+  letter-spacing: 5px;
+  margin-left: 0;
+}
+
+banner {
+  background-image: url(/images/banner.jpg);
+  -webkit-background-size: cover;
+  grid-column: span 4;
+}
+
+
+/* Remove left margin for the first anchor */
+.logo a:first-child {
+  margin-left: 0;
+}
+
+/* Remove right margin for the last anchor */
+.logo a:last-child {
+  margin-right: 0;
+}
+.navwrapper {
+  margin: 0 auto;
+}
+
+.container  .navwrapper{
+  display:grid;
+  height: 100px;
+  background: #a4a8a9;
+  width: 100%; 
+  /* display: flex; */
+  justify-content:space-around;
+}
+
+
+/*  Start ----- Layout Grid -flex Cv  */
+:root{
+  --main-radius:5px;
+  --main-padding:5px;
+}
+.container{
+  display: grid;
+  height: 80vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 5fr 1fr .7fr;
+  grid-template-areas: 
+  "nav nav nav nav"
+  "banner banner banner banner"
+  "sidebar content3 content3 content3"
+  "content1 main main main"
+  "content2 footer footer footer";
+  grid-gap: 0.2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  margin: 20px;
+}
+<!--============================ Nav&Navbar  ===================================== -->
+nav{
+  /* background: #F9F9F9; */
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  /* grid-column: span 4; */
+}
+main{
+  background:#e8ebee;
+  grid-area: main;
+  margin-left: 10px;
+}
+#banner{
+  /* background: #66c9c4; */
+  grid-area: banner;
+}
+#sidebar{
+  background: #e8ebee;
+  border-right: 15px solid #b7bdc3d9;
+  grid-area: sidebar;
+}
+
+#sidebar p{
+  margin-top: 50px;
+  text-align: end;
+  margin-right: 50px;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#content1{
+  background: #e8ebee;
+  border-right: 15px solid #b7bdc3d9;
+  grid-area: content1;
+  
+}
+#content1 p{
+  margin-top: 30px;
+  text-align: end;
+  margin-right: 50px;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+#content2{
+  background: #a4a8a9;
+  border-right: 15px solid #b7bdc3d9;
+  grid-area: content2;
+  
+}
+#content2 p{
+  margin-top: 50px;
+  text-align: end;
+  margin-right: 50px;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#content3 {
+  background:#e8ebee;
+  grid-area: content3;
+  text-align: left;
+  font-style: normal;
+
+}
+#content3 p {
+  font-style: normal;
+  font-size: 15px;
+  /* text-wrap: wrap; */
+  line-height: 25px;
+  text-align:left;
+  margin-left: 20px;
+  margin-top: 20px;
+
+  /* margin-bottom: 30px; */
+  /* margin-right: 20px; */
+}
+#content3 p:first-child::first-letter {
+  font-size: 30px;
+  font-weight: bold;
+  float:left;
+  margin-top: -3px;
+}
+/* #content4{
+  background: #a8bdb7;
+  grid-area: content4;
+} */
+footer{
+  background: #a4a8a9;
+  grid-area: footer;
+} 
+
+.sm {
+  align-items: center;
+}
+
+@media only screen and (max-width:550px) {
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.3fr 0.3fr .8fr .3fr 2fr .3fr .4fr;
+    grid-template-areas:
+    "nav"
+    "banner" 
+    "sidebar"
+    "content3" 
+    "content1"
+    "main"
+    "content2" 
+    "footer";
+  }
+}
+
+  /*  End ----- Layout Grid -flex Cv  */
+
+
+    /*  Start -----Main - work - Card Hover Style */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  }
+  
+  body{
+    font-family: sans-serif;
+    background: #f3eeee;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  
+  .row{
+    width: 90%;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns:repeat(5 ,1fr);
+    grid-gap: 30px 20px;
+    padding: 6rem 0;
+  }
+  
+  @media(max-width:991px){
+    .row{
+      grid-template-columns:repeat(2, 1fr);
+    }
+  }
+  
+  @media(max-width:575px){
+    .row{
+      grid-template-columns:1fr;
+    }
+  }
+
+  .card{
+    position: relative;
+    height: 200px;
+    min-height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.9);
+    transform: scale(0.85);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    transition: 0.3s ease;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  
+  .card:hover{
+    background-position: right;
+    transform: scale(1);
+  }
+  
+  .card .contentWrapper{
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    background: linear-gradient(
+      45deg,
+      rgba(0,0,0,1),
+      rgba(0,0,0,0.4)
+    );
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: #fff;
+    opacity:  0;
+  }
+  
+  .card:hover .contentWrapper{
+    opacity: 1;
+  }
+  
+  .card .contentWrapper .content{
+    width: 100%;
+  }
+  
+  .contentWrapper .content{
+    width: 0;
+    overflow: hidden;
+    transition: 0.3sn ease;
+  }
+  
+  .contentWrapper .content h3{
+    font-size: 24px;
+    padding-bottom: 15px;
+  }
+  
+  .contentWrapper .content p{
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 20px;
+  }
+  
+  .contentWrapper .content a{
+    display: inline-block;
+    text-transform: capitalize;
+    color:#000;
+    text-decoration: none;
+    background: #fff;
+    font-size: 16px;
+    border-radius: 50px;
+    padding: 10px 25px;
+  }
+
+ /*  End -----Main - work - Card Hover Style */
+
+
+.sm a{
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 36px;
+  width: 60px;
+  height: 60px;
+  color: #f0f0f0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 7px;
+}
+.sm a::before{
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 25%;
+  z-index: -1;
+  transition: transform .3s ease-in;
+}
+.sm a:nth-child(1)::before{
+  background: #38529a;
+}
+.sm a:nth-child(2)::before{
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100% #f09433 100%, ,#cc2366 100%);
+}
+.sm a:nth-child(3)::before{
+  background: #1c96e9;
+}
+.sm a:nth-child(4)::before{
+  background: #f70000;
+}
+.sm a:nth-child(5)::before{
+  background: #046596;
+}
+.sm a:nth-child(6)::before{
+  background: #f70000;
+}
+.sm a:nth-child(7)::before{
+  background: #046596;
+}
+.sm a:hover::before{
+  transform: scale(0);
+}
+.sm a i{
+  transition: transform .3s ease-in;
+}
+.sm a:nth-child(1):hover i{
+  background: #38529a;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.5);
+}
+.sm a:nth-child(2):hover i{
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%, #f09433 100%, ,#cc2366 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.5);
+}
+.sm a:nth-child(3):hover i{
+  background: #1c96e9;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.5);
+}
+.sm a:nth-child(4):hover i{
+  background: #f70000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.5);
+}
+.sm a:nth-child(5):hover i{
+  background: #046596;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.5);
+
+  .sm a:nth-child(6):hover i{
+    background: #f70000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.5);
+  }
+  .sm a:nth-child(7):hover i{
+    background: #046596;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.5);
