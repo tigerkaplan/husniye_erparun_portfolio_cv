@@ -21,7 +21,7 @@
 }
 
 banner {
-  background-image: url(/images/banner.jpg);
+  background-image: url(./images/banner.jpg);
   -webkit-background-size: cover;
   grid-column: span 4;
 }
@@ -38,15 +38,17 @@ banner {
 }
 .navwrapper {
   margin: 0 auto;
+  grid-area: navlink;
+  
 }
 
 .container  .navwrapper{
-  display:grid;
-  height: 100px;
-  background: #a4a8a9;
+  /* display:grid; */
+  height: 60px;
+  /* background: #a4a8a9; */
   width: 100%; 
-  /* display: flex; */
-  justify-content:space-around;
+  display: flex;
+  /* justify-content:space-around; */
 }
 
 
@@ -61,7 +63,7 @@ banner {
   grid-template-columns: 1fr 1fr 1fr 1fr ;
   grid-template-rows: 1fr 1fr 5fr 1fr .7fr;
   grid-template-areas: 
-  "nav nav nav nav"
+  "nav nav nav navlink"
   "banner banner banner banner"
   "sidebar content3 content3 content3"
   "content1 main main main"
@@ -112,7 +114,7 @@ main{
   margin-top: 30px;
   text-align: end;
   margin-right: 50px;
-  font-size: 30px;
+  font-size: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
@@ -123,10 +125,10 @@ main{
   
 }
 #content2 p{
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: end;
   margin-right: 50px;
-  font-size: 30px;
+  font-size: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #content3 {
@@ -340,7 +342,7 @@ footer{
   background: #046596;
 }
 .sm a:nth-child(6)::before{
-  background: #f70000;
+  /* background: #f70000; */
 }
 .sm a:nth-child(7)::before{
   background: #046596;
@@ -370,7 +372,7 @@ footer{
   transform: scale(1.5);
 }
 .sm a:nth-child(4):hover i{
-  background: #f70000;
+  /* background: #f70000; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(1.5);
@@ -382,7 +384,7 @@ footer{
   transform: scale(1.5);
 
   .sm a:nth-child(6):hover i{
-    background: #f70000;
+    /* background: #f70000; */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: scale(1.5);
