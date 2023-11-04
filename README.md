@@ -1,5 +1,5 @@
 
-# Bootstrap Website
+# Personal Portfolio
 The project about creating a portfolio CV using HTML and CSS.
 
 
